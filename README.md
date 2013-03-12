@@ -12,7 +12,7 @@ ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
 ```
 
 It will load all scripts from ~/.dotfiles/bash_config/ in alphabetical order.
-A good idea is to use numbers to at the begining of files' names.
+A good idea is to use numbers at the beginning of files' names.
 
 ### on-directory-change.sh
 
