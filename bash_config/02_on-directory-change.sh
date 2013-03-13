@@ -1,6 +1,7 @@
 
 function directoryChange()
 {
+    local cmd=""
     # before hookts
     for cmd in $BEFORE_DIRECTORY_CHANGE; do
         $cmd "$@"
@@ -11,7 +12,5 @@ function directoryChange()
     for cmd in $AFTER_DIRECTORY_CHANGE; do
         $cmd "$@"
     done
-
-    unset cmd
 }
 alias cd="directoryChange"

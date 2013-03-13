@@ -9,3 +9,6 @@ if [ -d "$HOME/.dotfiles/bash_config" ]; then
     done
 fi
 unset file
+
+# ensure all hookt are run once
+cd $PWD

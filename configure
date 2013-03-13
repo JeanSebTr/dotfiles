@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+echo 'Wellcome to this .dotfiles configurator!'
+echo ' --- Let start with some questions ---'
+echo -n "Your full name: "
+read NAME
+
+echo -n "Your email address: "
+read EMAIL
+
+echo -n "Your NAS: "
+read NAS
+if [ "$NAS" == "" ]; then
+    echo "It's wise to not give this number ;)"
+else
+    echo "You foul"'!'" You shouldn't give this number information to any script..."
+fi
+unset NAS
+
+echo " --- Setup bash --- "
+rm "$HOME/.bash_profile"
+ln -s "$HOME/.dotfiles/.bash_profile" "$HOME/.bash_profile"
+
+if [ ! -d "$HOME/.dotfiles/cache" ]; then
+    mkdir "$HOME/.dotfiles/cache"
+fi
+
+echo " --- Base git configuration --- "
+cat > "$HOME/.dotfiles/cache/gitconfig" << GITCONFIG
+[user]
+    name = $NAME
+    email = $EMAIL
+[core]
+    excludesfile = $HOME/.dotfiles/git/gitignore
+GITCONFIG
+rm "$HOME/.gitconfig"
+ln -s "$HOME/.dotfiles/cache/gitconfig" "$HOME/.gitconfig"
+
+
+echo 'ALL DONE. have a nice day!'
+echo
