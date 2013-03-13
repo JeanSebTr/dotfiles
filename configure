@@ -32,6 +32,9 @@ cat > "$HOME/.dotfiles/cache/gitconfig" << GITCONFIG
     email = $EMAIL
 [core]
     excludesfile = $HOME/.dotfiles/git/gitignore
+[color]
+    branch = auto
+    diff = auto
 GITCONFIG
 rm "$HOME/.gitconfig"
 ln -s "$HOME/.dotfiles/cache/gitconfig" "$HOME/.gitconfig"
