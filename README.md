@@ -39,4 +39,5 @@ export AFTER_DIRECTORY_CHANGE="$AFTER_DIRECTORY_CHANGE _function_name"
 * Add initial OSX settings
 * Add SSH config
 * Add softwares settings
+* Add project name + relative path in Prompt
 * ...

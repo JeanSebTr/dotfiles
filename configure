@@ -13,7 +13,7 @@ read NAS
 if [ "$NAS" == "" ]; then
     echo "It's wise to not give this number ;)"
 else
-    echo "You foul"'!'" You shouldn't give this number information to any script..."
+    echo "You foul"'!'" You shouldn't give this information to any script..."
 fi
 unset NAS
 
