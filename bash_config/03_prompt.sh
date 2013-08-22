@@ -12,9 +12,9 @@ case ${TERM} in
 esac
 
 if ${use_color} ; then
-    RED="\[\033[0;31m\]"
-    YELLOW="\[\033[0;33m\]"
-    GREEN="\[\033[0;32m\]"
+    RED="\[\033[31m\]"
+    YELLOW="\[\033[33m\]"
+    GREEN="\[\033[32m\]"
     # enable ls colors
     alias ls='ls -G'
     # enable grep color
@@ -22,9 +22,9 @@ if ${use_color} ; then
 fi
 
 if [[ ${EUID} == 0 ]] ; then
-        PS1="$RED\$(date +%H:%M) \w$YELLOW\$(__git_ps1) $GREEN#\[\033[00m\] "
+        PS1="$RED\$(date +%H:%M) \w$YELLOW\$(__git_ps1) $GREEN#\[\033[m\] "
 else
-        PS1="$RED\$(date +%H:%M) \w$YELLOW\$(__git_ps1) $GREEN\$\[\033[00m\] "
+        PS1="$RED\$(date +%H:%M) \w$YELLOW\$(__git_ps1) $GREEN\$\[\033[m\] "
 fi
 
 # Try to keep environment pollution down, EPA loves us.

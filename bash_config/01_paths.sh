@@ -1,16 +1,4 @@
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
-fi
-
-if [ -d `brew --prefix`/bin ]; then
-    PATH=`brew --prefix`/bin:$PATH
-fi
-
-# access to cli version of currently installed modules for a project
-export PATH=./node_modules/.bin:$PATH
-
-
 #initial shell opened                                                                                     
 export HISTFILE="$PWD/.dir_bash_history"
 #timestamp all history entries                                                                            
