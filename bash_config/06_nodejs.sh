@@ -1,6 +1,6 @@
 
 # access to cli version of currently installed modules for a project
-export PATH=./node_modules/.bin:$PATH
+export PATH="./node_modules/.bin:$PATH"
 
 NPM_BIN=$(which npm)
 if [ -f "$NPM_BIN" ]; then
