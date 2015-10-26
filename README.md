@@ -40,4 +40,5 @@ export AFTER_DIRECTORY_CHANGE="$AFTER_DIRECTORY_CHANGE _function_name"
 * Add SSH config
 * Add softwares settings
 * Add project name + relative path in Prompt
+* http://superuser.com/questions/585713/disable-horizontal-gestures-in-vlc-on-os-x
 * ...
